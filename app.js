@@ -72,7 +72,7 @@ class Clothing {
 }
 
 const birkin = new Clothing('Birkin Bag', 'Hermes', 'purple', 'bag', 'lg', 15470 )
-
+const redBottoms = new Clothing('Red Bottoms', 'Christian Loboutin', 'black', 'shoes', '6', 3000)
 
 
 
@@ -131,3 +131,17 @@ workButton.addEventListener('click', ()=>{
     barbie.render();
 })
 
+const rbButton = document.getElementById('red-bottoms')
+
+rbButton.addEventListener('click', () => {
+    if(barbie.wallet >= redBottoms.price){
+        barbie.wardrobe.push(redBottoms);
+        barbie.wallet -= redBottoms.price;
+        barbie.render();
+        // WE updated the wardrobe that belongs to barbie so the object was changed
+    // the object control the information that is visible to us on the screen
+    // I want to re-render the content so that i can see the updated information in the browser
+    } else {
+        alert('Stop trippin you know you aint got it like that');
+    }
+})
