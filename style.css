@@ -75,6 +75,7 @@ transition: .4s ease;
 transition: .4s ease;
 background-color: #FE529E;
 transform: scale(1.1);
+cursor: pointer;
 }
 
 #red-bottoms:hover {
